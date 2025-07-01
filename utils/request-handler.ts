@@ -83,7 +83,11 @@ export class RequestHandler {
             })
             this.cleanupFields()
             const actualStatus = response.status()
-            responseJSON = await response.json()
+            try {
+                responseJSON = await response.json()
+            } catch (error) {
+                responseJSON = {}
+            }
             this.logger.logResponse(actualStatus, responseJSON)
             this.statusCodeValidator(actualStatus, statusCode, this.postRequest)
         })
@@ -103,7 +107,11 @@ export class RequestHandler {
             })
             this.cleanupFields()
             const actualStatus = response.status()
-            responseJSON = await response.json()
+            try {
+                responseJSON = await response.json()
+            } catch (error) {
+                responseJSON = {}
+            }
             this.logger.logResponse(actualStatus, responseJSON)
             this.statusCodeValidator(actualStatus, statusCode, this.putRequest)
         })
