@@ -8,9 +8,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
-    "@types/node": "^22.10.2",
-    "ajv": "^8.17.1",
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^26.1.2",
+    "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "genson-js": "^0.0.8"
   }
